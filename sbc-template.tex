@@ -1,0 +1,199 @@
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+
+\usepackage{graphicx,url}
+
+\usepackage[latin1]{inputenc}  
+\usepackage[utf8]{inputenc}  
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{indentfirst}
+\usepackage{longtable}
+\usepackage{lipsum} 
+
+\definecolor{verde}{rgb}{0,0.5,0}
+
+\lstset{language=C, 
+              belowcaptionskip=1\baselineskip,
+                breaklines=true,
+                frame=false,
+                xleftmargin=\parindent,
+                showstringspaces=false,
+                basicstyle=\footnotesize\ttfamily,
+                keywordstyle=\bfseries\color{green!40!black},
+                commentstyle=\itshape\color{purple!40!black},
+                identifierstyle=\color{blue},
+                stringstyle=\color{orange},
+                numbers=left,
+            }
+
+\sloppy
+
+\title{Initial Report\\ ALOHA \\Distrubuted chat system}
+
+\author{Alexandru Mihail Orlando, Darkhan Akhmediyev, Fiza Razzaq, \\ Lyubomir Vasilev, Sara Zain, Suhrita Kapilavayi}
+
+
+\begin{document} 
+
+\maketitle
+
+\section{Project Description}
+
+The aim of this project is to build a user friendly distributed chat system which allows two different clients (web and iOS) to communicate securely with one another in real time. It follows Client-Server Architecture based on socket programming which provides fast, lag free applications capable of handling multiple requests at a time. The users will connect to a chat server using one of TCP clients for initiating bi-directional communication. \\
+Figure1 given below explains the working of Aloha Chat Application:
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=1\textwidth, hsize=0.8\hsize]{Design.png}
+\caption{Project Aloha prototype}
+\label{fig:figgantt}
+\end{figure}
+
+In order to start communication, client iOS/web either starts from previous chat box or searches the name in search box to communicate with one and more than one users by selecting the tick boxes for multiple users for group chat (Messages Overview screen) and then by clicking the chat button will take to another screen (Messages Detailed screen). Second user will get the instant notification of chat and can reply in Messages Detailed screen, the two users are communicating and might have extra features such as emoticons and photo sharing.\\
+\textbf{Strategies:} \\
+The aims of the project are divided into a number of modules listed in the section Figure 2 "Gantt Chart". The modules are then divided further into sub modules, where each member of the group has been given a task according to their abilities and skills. This enables each member of the group to work independently. Also, all members of the group will be responsible for documenting the task on which they have worked. This eliminates putting burden of documentation on one member and leaving the documentation for last minute. The final report will be added by one member of the group for proof-reading and finalizing the structure. Our strategy is to start and finish the project early for avoiding last minute hassles. In order to get a better understanding of the modules implemented, the Table 1 shows the correlation between the high level aims and the technology used to achieve them. \\
+
+\begin{table}[!ht]
+\centering
+\captionof{table}{Technologies} \label{tab:title} 
+\smallskip
+\begin{tabular}{l c c}
+\hline
+& Platform & Technologies used\\[0.5ex]
+\hline
+&&\\[-2ex]
+1 & Server & Python (Linux based System) \\[0.5ex]
+\hline
+&&\\[-2ex]
+2 & Client A (iOS Application) & iOS (implemented in Swift 3.0) \\[0.5ex]
+\hline
+&&\\[-2ex]
+3 & Client B (Website) & JavaScript, CSS and HTML \\[0.5ex]
+\hline
+&&\\[-2ex]
+4 & Database & MySQL \\[0.5ex]
+\hline
+&&\\[-2ex]
+5 & Protocol (Server, Client) & TCP/IP and TSL/SSL \\[0.5ex]
+\hline
+\end{tabular}
+\end{table}
+
+The project will be based on Agile, more specifically SCRUM methodology, as the project would require certain amount of adaptability. For Managing the project, the software Microsoft’s "TFS" will be used, which gives the ability to create and manage scrum boards This will also help the group to monitor the project,  prioritize requirements and putting them into five sprints which are given in figure2 "Gantt Chart". \\
+
+\textbf{High Level Work Breakdown structure:}
+\begin{table}[!ht] 
+\centering
+\label{tab:exTable2}
+\smallskip
+\begin{tabular}{l c }
+\hline
+High-Level Tasks & No. of days\\[0.5ex]
+\hline
+Formation of group & 7 \\[0.5ex]
+\hline
+Introduction, Research, Discussion, suggestions and finalizing basic requirements \\ for the system. & 7 \\[0.5ex]
+\hline
+Basic interface design and implementation, initial report documentation and \\ presentation, design and implementation of database. & 7 \\[0.5ex]
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht] 
+\centering
+\label{tab:exTable3}
+\smallskip
+\begin{tabular}{l c }
+\hline
+Setting up the required tools and technologies (server, DB, Mock server and API Manager \\ Design). & 3 \\[0.5ex]
+\hline
+Main aims development, testing and documentation. & 28 \\[0.5ex]
+\hline
+Additional aims development, testing and documentation. & 10 \\[0.5ex]
+\hline
+Final report and presentation. & 4 \\[0.5ex]
+\end{tabular}
+\end{table}
+
+\textbf{Gantt Chart:}\\
+The Gantt chart given below in Figure 2, illustrates project aims which are divided into sprints:
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=1.1\textwidth]{gant_chart.png}
+\caption{Gantt chart}
+\label{fig:figgantt}
+\end{figure}
+\textbf{Group Progress:}
+\begin{itemize}
+\item[--]Communication Diagram
+\item[--]Sequence Diagram
+\item[--]Gantt chart
+\item[--]User experience design flows
+\item[--]Project prerequisites (TCP functionality testing)
+\end{itemize}
+\section{Project organisation} \label{sec:firstpage}\\
+
+In order to achieve the maximum efficiency and managing the workload we will distribute the following roles to the members:
+\begin{table}[!ht]
+\centering
+\captionof{table}{Technologies} \label{tab:title} 
+\smallskip
+\begin{tabular}{l c c}
+\hline
+Roles & Members\\[0.5ex]
+\hline
+Project coordinator and iOS development \\ (Client A) & Lyubomir \\[0.5ex]
+\hline
+Server(core) & Alex, Darkhan, Sara, Suhrita \\[0.5ex]
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\centering
+\smallskip
+\begin{tabular}{l c c}
+\hline
+Website (Client B) & Suhrita \\[0.5ex]
+\hline
+API & Fiza \\[0.5ex]
+\hline
+Database design & All members \\[0.5ex]
+\hline
+Databases creation & Alex, Lyubomir \\[0.5ex]
+\hline
+Documentation & All members \\[0.5ex]
+\hline
+\end{tabular}
+\end{table}
+\textbf{Group Collaboration, Conflict management and peer evaluation strategies are described in the following phrases:}
+
+\begin{itemize}
+    \item The project will be based on agile methodology and expects to have a good number of scope changes and eventually will test the product on sprint's (each which will be one week long) avoiding testing the product in the final week.
+    \item ALOHA’s group will try to cover the most critical parts of application with unit tests and use a Test Driven Development (TDD) approach to the development process.
+    \item The group has set up Google drive to communicate with each other, where files are uploaded online and files can be re-write, if other members come up with better suggestions. 
+    \item WhatsApp group has been created for general discussion and instants notifications for updates.
+    \item Daily stand ups will be held using goToMeetings or Skype. This will keep all the members of the group informed of the project’s progress 
+    \item Weekly retrospectives - face to face meetings will be held in which the team analyses the results of the previous sprint and based on them every team member shares what he thinks the team should:
+        \item[--] Start doing / Stop doing / Continue doing
+    \item It is a necessary for all members to attend face to face weekly meetings. If for some reason a member is unable to attend the meeting then the meeting’s updates will be uploaded on the Google drive to keep it informed.  
+    \item Decisions will only be taken if there is consensus among members, this will stop one person dominating the group.
+    \item In case of a conflict a mediator will be appointed by other group members for resolving the conflict.
+    \item Peer evaluation form attached in appendix will be filled by all members at the end of the project.
+    \item Ideally, every member should receive equal number of points(16.6), given that no extreme irregularities have been found in the upper mentioned form
+\end{itemize}
+
+\textbf{Limitations:}
+\begin{itemize}
+\item Maximum number of requests server can handle is ??: ;
+\item Only English version of application is available;
+\item HTML5 is needed for supporting web sockets in web client;
+\item 5000 requests simultaneously
+\end{itemize}
+
+\textbf{Conclusion:}\\
+All in all, to complete our project, we will use the upper mentioned tools and strategies and implement a flexible flat design which will be developed sprint to sprint. Our overall perception of success is creating a MVP with the basic functions expressed in the UX flow chart, in order to get a customer validation.
+
+\end{document}
